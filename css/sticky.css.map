@@ -1,1 +1,0 @@
-{"version":3,"sources":["..\\src\\scss\\base\\sticky.scss","sticky.css"],"names":[],"mappings":"AAAA;EACC,kBAAA;ACCD","file":"sticky.css","sourcesContent":["[data-sticky] {\r\n\tposition: relative;\r\n}\r\n","[data-sticky] {\n  position: relative;\n}"]}
