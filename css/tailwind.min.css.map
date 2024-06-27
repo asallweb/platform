@@ -1,0 +1,1 @@
+{"version":3,"sources":["..\\src\\scss\\libs\\tailwind.scss"],"names":[],"mappings":"AAAA,cAAA,CACA,oBAAA,CACA","file":"tailwind.min.css","sourcesContent":["@tailwind base;\r\n@tailwind components;\r\n@tailwind utilities;\r\n"]}
