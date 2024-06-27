@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240627115537">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240627183211">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -128,7 +128,7 @@
 									</li>
 								</ul>
 								<div class="menu__bottom _mobile">
-									<button class="menu__bottom-button button _orange _arrow _maxwdth-320">
+									<button class="menu__bottom-button button _orange _arrow _maxwdth-320" data-popup="#popup">
 										Обратная связь
 										<div class="button__icon">
 											<svg width="6" height="10">
@@ -202,14 +202,14 @@
 						<b>Компания «Бизнес Платформа» основана в 2010 году для работы в новых перспективных нишах ИТ рынка.</b>
 						<p>В настоящее время опыт работы компании позволяет предоставлять нашим клиентам комплексные продукты, услуги и решения в области ИТ аутсорсинга на базе Дата центров уровня Tier-3 , а также предлагать широкий спектр бизнес-решений на базе различных платформ для построения ИТ инфраструктуры. </p>
 					</div>
-					<a href="" class="button _orange _arrow _maxwdth-220">
+					<button class="button _orange _arrow _maxwdth-220" data-popup="#popup">
 						Обратная связь
 						<div class="button__icon">
 							<svg width="6" height="10">
 								<use xlink:href="img/icons/icons.svg#arrow"></use>
 							</svg>
 						</div>
-					</a>
+					</button>
 				</div>
 				<div class="about-us__image">
 					<img src="img/content/about-us.webp">
@@ -397,7 +397,7 @@
 									Мы также предоставляем высококвалифицированную техническую поддержку и консультации по использованию наших облачных услуг, на всей стадии внедрения, чтобы помочь клиентам максимально эффективно использовать все возможности нашей платформы.
 								</div>
 							</div>
-							<button class="button _orange _arrow _maxwdth-220">
+							<button class="button _orange _arrow _maxwdth-220" data-popup="#popup">
 								Обратная связь
 								<div class="button__icon">
 									<svg width="6" height="10">
@@ -418,7 +418,7 @@
 								<b>Наша компания обладает собственными сегментами в центрах обработки данных, что позволяет нам обеспечивать высокую доступность и надежность наших облачных услуг. </b>
 								<p>Мы также предлагаем различные уровни защиты данных, включая шифрование, резервное копирование и многоуровневую аутентификацию, чтобы гарантировать конфиденциальность и целостность информации наших клиентов.</p>
 							</div>
-							<button class="about__button button _orange _arrow _maxwdth-220">
+							<button class="about__button button _orange _arrow _maxwdth-220" data-popup="#popup">
 								Обратная связь
 								<div class="button__icon">
 									<svg width="6" height="10">
@@ -709,7 +709,74 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240627115537"></script>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__close-wrapper">
+			<button data-close type="button" class="popup__close">
+				<svg width="15" height="15" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path opacity="1" d="M1.73333 1.48883L21.5469 21.0288" stroke="#200E32" stroke-linecap="square" />
+					<path opacity="1" d="M21.2667 1.48883L1.45309 21.0288" stroke="#200E32" stroke-linecap="square" />
+				</svg>
+			</button>
+		</div>
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__text">
+					<div class="popup__grid-2col">
+						<div class="popup__column">
+							<div class="popup__title title _orange-span _mb-50-30 _fz-84-32">
+								<span>ОБРАТНАЯ</span> <br> СВЯЗЬ
+							</div>
+							<div class="popup__text">Разработаем ИТ-решения под задачи вашего бизнеса. Просто расскажите о проекте по телефону или почте — дальше дело за нами.</div>
+							<div class="popup__bottom" data-da=".transfer-popup-tablet, 1080">
+								<div class="popup__bottom-icon">
+									<svg width="24" height="24">
+										<use xlink:href="img/icons/icons.svg#message"></use>
+									</svg>
+								</div>
+								<div class="popup__bottom-text">Все поля являются обязательными для заполнения</div>
+							</div>
+						</div>
+						<div class="popup__column">
+							<div class="popup__form form">
+								<div class="form__wrapper _2cols _gg-30-20">
+									<div class="form__field-wrapper _borded">
+										<input type="text" placeholder="Как к вам обращаться">
+									</div>
+									<div class="form__field-wrapper _borded">
+										<input type="text" placeholder="E-mail">
+									</div>
+									<div class="form__field-wrapper _borded">
+										<input type="text" placeholder="Телефон">
+									</div>
+									<div class="form__field-wrapper _borded">
+										<input type="text" placeholder="Компания">
+									</div>
+									<div class="form__field-wrapper _borded _colspan-2">
+										<textarea placeholder="Задать вопрос" class="_mh-190-160"></textarea>
+									</div>
+									<div class="form__field-wrapper _colspan-2 _dflex _bg-none _pt-30-0">
+										<button class="popup__submit button _orange _arrow _juscont-center _maxwdth-220" type="submit">
+											Задать вопрос
+											<div class="button__icon">
+												<svg width="6" height="10">
+													<use xlink:href="img/icons/icons.svg#arrow"></use>
+												</svg>
+											</div>
+										</button>
+										<div class="form__submit-text">
+											Отправляя форму, вы соглашаетесь на <a href="">обработку персональных данных</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="transfer-popup-tablet"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20240627183211"></script>
 </body>
 
 </html>

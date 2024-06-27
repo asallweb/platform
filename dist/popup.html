@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>404 Page</title>
+	<title>Popup</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -14,7 +14,7 @@
 
 <body>
 	<div class="wrapper">
-		<div class="header-background _bg-2"></div>
+		<div class="header-background _bg-4"></div>
 		<header class="header" data-scroll="120" data-scroll-show>
 			<div class="__container">
 				<div class="header__grid ">
@@ -194,99 +194,107 @@
 				</div>
 			</div>
 		</section>
-		<section class="section-404">
+		<section class="about-us">
 			<div class="__container">
-				<div class="section-404__content">
-					<div class="section-404__title">Страница не найдена</div>
-					<div class="section-404__text">Запрашиваемая вами страница не существует или была удалена.</div>
-					<a href="" class="button _orange _arrow _maxwdth-220">
-						На главную
+				<div class="about-us__content">
+					<div class="about-us__title">Название услуги на сайте в несколько строк</div>
+					<div class="about-us__text">
+						<p>Краткий описательный текст на сайте в несколько слов для пояснения основоной цели услуги, и для чего она может понадобиться пользователью с дальнейшим описании на странице.</p>
+					</div>
+					<button class="button _orange _arrow _maxwdth-220" data-popup="#popup">
+						Обратная связь
 						<div class="button__icon">
 							<svg width="6" height="10">
 								<use xlink:href="img/icons/icons.svg#arrow"></use>
 							</svg>
 						</div>
-					</a>
+					</button>
 				</div>
-				<div class="section-404__image">
-					<img src="img/content/404.webp">
+				<div class="about-us__image _service">
+					<img src="img/content/default.webp">
 				</div>
 			</div>
 		</section>
 		<main class="page">
-			<section class="faq">
+			<section class="main-content">
 				<div class="__container">
-					<div class="faq__head">
-						<div class="faq__title title">Вопросы и ответы</div>
-						<button class="faq__button button _orange _arrow _maxwdth-220" data-da=".transfer-faq-mobile-button, 768" data-popup="#popup">
-							Задать вопрос
-							<div class="button__icon">
+					<div class="main-content__wrapper _pt-100-80">
+						<div class="main-content__content">
+							<h1 class="page-subtitle _fz-32-20 _mb-40-25">Заголовок для очередного блока</h1>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur repellat, non deleniti laudantium eligendi, aliquam iste quibusdam consequatur aliquid earum placeat, provident atque amet maxime rem quo. Ea, temporibus voluptatum.
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur repellat, non deleniti laudantium eligendi, aliquam iste quibusdam consequatur aliquid earum placeat, provident atque amet maxime rem quo. Ea, temporibus voluptatum.
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur repellat, non deleniti laudantium eligendi, aliquam iste quibusdam consequatur aliquid earum placeat, provident atque amet maxime rem quo. Ea, temporibus voluptatum.
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur repellat, non deleniti laudantium eligendi, aliquam iste quibusdam consequatur aliquid earum placeat, provident atque amet maxime rem quo. Ea, temporibus voluptatum.
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur repellat, non deleniti laudantium eligendi, aliquam iste quibusdam consequatur aliquid earum placeat, provident atque amet maxime rem quo. Ea, temporibus voluptatum.
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur repellat, non deleniti laudantium eligendi, aliquam iste quibusdam consequatur aliquid earum placeat, provident atque amet maxime rem quo. Ea, temporibus voluptatum.
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur repellat, non deleniti laudantium eligendi, aliquam iste quibusdam consequatur aliquid earum placeat, provident atque amet maxime rem quo. Ea, temporibus voluptatum.
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="offers __container">
+				<h2 class="offers__title title _orange-span _mb-70-32"><span>Продукты</span> и предложения</h2>
+				<div data-spollers="768,max" class="offers__grid grid-3col spollers">
+					<details class="spollers__item offers__item small-item _shadowed">
+						<summary class="spollers__title offers__item-title">Облако</summary>
+						<div class="spollers__body offers__body">
+							<div class="offers__item-list">
+								<a href="" class="offers__item-link">Виртуальный выделенный серыер Astra</a>
+								<a href="" class="offers__item-link">Корпоративная почта</a>
+								<a href="" class="offers__item-link">Виртуальное рабочее место VDI</a>
+							</div>
+							<a href="" class="offers__detail detail-link">
+								Подробнее
 								<svg width="6" height="10">
 									<use xlink:href="img/icons/icons.svg#arrow"></use>
 								</svg>
+							</a>
+							<div class="offers__item-image">
+								<img src="img/content/offers-1.webp">
 							</div>
-						</button>
-					</div>
-					<div data-spollers class="faq__spollers spollers transfer-faq-mobile-button">
-						<div class="faq__spollers-column">
-							<details class="faq__spollers-item spollers__item">
-								<summary class="faq__spollers-title spollers__title">
-									<svg width="35" height="35">
-										<use xlink:href="img/icons/icons.svg#message-question"></use>
-									</svg>
-									Название очередного вопроса на сайте?
-								</summary>
-								<div class="faq__spollers-body spollers__body">Контент спойлера Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos laboriosam recusandae eaque, at quia itaque. Sapiente, soluta corrupti! Accusamus neque eveniet aliquid facere soluta delectus quibusdam sunt quidem rerum impedit?</div>
-							</details>
-							<details class="faq__spollers-item spollers__item">
-								<summary class="faq__spollers-title spollers__title">
-									<svg width="35" height="35">
-										<use xlink:href="img/icons/icons.svg#message-question"></use>
-									</svg>
-									Еще один вопрос на сайте про выбранную тему
-								</summary>
-								<div class="faq__spollers-body spollers__body">Контент спойлера Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos laboriosam recusandae eaque, at quia itaque. Sapiente, soluta corrupti! Accusamus neque eveniet aliquid facere soluta delectus quibusdam sunt quidem rerum impedit?</div>
-							</details>
-							<details class="faq__spollers-item spollers__item">
-								<summary class="faq__spollers-title spollers__title">
-									<svg width="35" height="35">
-										<use xlink:href="img/icons/icons.svg#message-question"></use>
-									</svg>
-									Еще один вопрос на сайте
-								</summary>
-								<div class="faq__spollers-body spollers__body">Контент спойлера Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos laboriosam recusandae eaque, at quia itaque. Sapiente, soluta corrupti! Accusamus neque eveniet aliquid facere soluta delectus quibusdam sunt quidem rerum impedit?</div>
-							</details>
 						</div>
-						<div class="faq__spollers-column">
-							<details class="faq__spollers-item spollers__item">
-								<summary class="faq__spollers-title spollers__title">
-									<svg width="35" height="35">
-										<use xlink:href="img/icons/icons.svg#message-question"></use>
-									</svg>
-									Еще один вопрос на сайте
-								</summary>
-								<div class="faq__spollers-body spollers__body">Контент спойлера Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos laboriosam recusandae eaque, at quia itaque. Sapiente, soluta corrupti! Accusamus neque eveniet aliquid facere soluta delectus quibusdam sunt quidem rerum impedit?</div>
-							</details>
-							<details class="faq__spollers-item spollers__item">
-								<summary class="faq__spollers-title spollers__title">
-									<svg width="35" height="35">
-										<use xlink:href="img/icons/icons.svg#message-question"></use>
-									</svg>
-									Новый вопрос на сайте с длинной формулировкой
-								</summary>
-								<div class="faq__spollers-body spollers__body">Контент спойлера Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos laboriosam recusandae eaque, at quia itaque. Sapiente, soluta corrupti! Accusamus neque eveniet aliquid facere soluta delectus quibusdam sunt quidem rerum impedit?</div>
-							</details>
-							<details class="faq__spollers-item spollers__item">
-								<summary class="faq__spollers-title spollers__title">
-									<svg width="35" height="35">
-										<use xlink:href="img/icons/icons.svg#message-question"></use>
-									</svg>
-									Название очередного вопроса на сайте?
-								</summary>
-								<div class="faq__spollers-body spollers__body">Контент спойлера Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos laboriosam recusandae eaque, at quia itaque. Sapiente, soluta corrupti! Accusamus neque eveniet aliquid facere soluta delectus quibusdam sunt quidem rerum impedit?</div>
-							</details>
+					</details>
+					<details class="spollers__item offers__item small-item _shadowed">
+						<summary class="spollers__title offers__item-title">Дата центр</summary>
+						<div class="spollers__body offers__body">
+							<div class="offers__item-list">
+								<a href="" class="offers__item-link">Аренда серверов в дата центре</a>
+								<a href="" class="offers__item-link">Размещение серверов</a>
+								<a href="" class="offers__item-link">Администрирование серверов</a>
+								<a href="" class="offers__item-link">Резервное копирование даных</a>
+							</div>
+							<a href="" class="offers__detail detail-link">
+								Подробнее
+								<svg width="6" height="10">
+									<use xlink:href="img/icons/icons.svg#arrow"></use>
+								</svg>
+							</a>
+							<div class="offers__item-image">
+								<img src="img/content/offers-2.webp">
+							</div>
 						</div>
-					</div>
+					</details>
+					<details class="spollers__item offers__item small-item _shadowed">
+						<summary class="spollers__title offers__item-title">Аутсорсинг</summary>
+						<div class="spollers__body offers__body">
+							<div class="offers__item-list">
+								<a href="" class="offers__item-link">Импортозамещение</a>
+								<a href="" class="offers__item-link">Проектирование и аренда инфраструктуры</a>
+								<a href="" class="offers__item-link">Корпоративная телефония</a>
+								<a href="" class="offers__item-link">Аудит IT инфраструктуры</a>
+								<a href="" class="offers__item-link">Миграция в облако</a>
+							</div>
+							<a href="" class="offers__detail detail-link">
+								Подробнее
+								<svg width="6" height="10">
+									<use xlink:href="img/icons/icons.svg#arrow"></use>
+								</svg>
+							</a>
+							<div class="offers__item-image">
+								<img src="img/content/offers-3.webp">
+							</div>
+						</div>
+					</details>
 				</div>
 			</section>
 			<section class="get-started">
