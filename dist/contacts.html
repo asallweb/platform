@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240730195213">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240730205645">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -228,7 +228,67 @@
 						</div>
 					</div>
 					<div class="contacts__map">
-						<iframe src="https://yandex.ru/map-widget/v1/?ll=37.701412%2C55.809747&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc1OTg1NxJQ0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCa0YDQsNGB0L3QvtCx0L7Qs9Cw0YLRi9GA0YHQutCw0Y8g0YPQu9C40YbQsCwgMzjQujIiCg0_zhZCFS49X0I%2C&utm_campaign=desktop&utm_medium=search&utm_source=maps&z=17.11" width="100%" height="500" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+						<script src="https://api-maps.yandex.ru/2.1/?apikey=a47b6237-1c47-4db3-896b-5421082fc18a&lang=ru_RU&_v=20240730205645" type="text/javascript"></script>
+						<div id="map" style="width: 100%; height: 400px;"></div>
+						<script type="text/javascript">
+							ymaps.ready(init);
+
+							function init() {
+								// Создание карты.
+								var myMap = new ymaps.Map("map", {
+									center: [55.809019, 37.704565], // Координаты центра карты.
+									zoom: 16, // Масштаб карты.
+									controls: ['zoomControl'] // Только элемент управления масштабом.
+								});
+
+								// Удаление всех элементов управления, кроме зум-контроля.
+								myMap.controls.remove('trafficControl');
+								myMap.controls.remove('searchControl');
+								myMap.controls.remove('typeSelector');
+								myMap.controls.remove('geolocationControl');
+								myMap.controls.remove('rulerControl');
+								myMap.controls.remove('routeButtonControl');
+								myMap.controls.remove('fullscreenControl');
+
+								// Оставляем только кнопки увеличения и уменьшения масштаба.
+								myMap.controls.add('zoomControl', {
+									float: 'none',
+									position: {
+										right: 10,
+										top: 10
+									}
+								});
+
+								// Добавление маркера с указанной SVG-иконкой.
+								var svgIconPath = 'img/icons/map_pin.webp';
+								var myPlacemark = new ymaps.Placemark([55.809019, 37.704565], {}, {
+									iconLayout: 'default#image',
+									iconImageHref: svgIconPath,
+									iconImageSize: [63, 76],
+									iconImageOffset: [-31.5, -76]
+								});
+
+								myMap.geoObjects.add(myPlacemark);
+							}
+						</script>
+						<style>
+							#map {
+								width: 100%;
+								height: 400px;
+							}
+
+							.ymaps-2-1-79-ground-pane {
+								filter: grayscale(1);
+								-ms-filter: grayscale(1);
+								-webkit-filter: grayscale(1);
+								-moz-filter: grayscale(1);
+								-o-filter: grayscale(1);
+							}
+
+							.ymaps-2-1-79-map-copyrights-promo {
+								display: none !important;
+							}
+						</style>
 					</div>
 				</div>
 			</section>
@@ -247,19 +307,24 @@
 						<div class="feedback__form form">
 							<div class="form__wrapper">
 								<div class="form__field-wrapper _borded">
-									<input type="text" placeholder="Как к вам обращаться">
+									<div class="form__field-placeholder">Как к вам обращаться</div>
+									<input type="text" class="form__input">
 								</div>
 								<div class="form__field-wrapper _borded">
-									<input type="text" placeholder="E-mail">
+									<div class="form__field-placeholder">E-mail</div>
+									<input type="text" class="form__input">
 								</div>
 								<div class="form__field-wrapper _borded">
-									<input type="text" placeholder="Телефон">
+									<div class="form__field-placeholder">Телефон</div>
+									<input type="text" class="form__input">
 								</div>
 								<div class="form__field-wrapper _borded">
-									<input type="text" placeholder="Компания">
+									<div class="form__field-placeholder">Компания</div>
+									<input type="text" class="form__input">
 								</div>
 								<div class="form__field-wrapper _borded _grid-column-2">
-									<textarea placeholder="Задать вопрос"></textarea>
+									<div class="form__field-placeholder _top-20">Задать вопрос</div>
+									<textarea class="form__input"></textarea>
 								</div>
 								<div class="form__field-wrapper _grid-column-2">
 									<button class="button _orange _arrow _juscont-center" type="submit">
@@ -396,19 +461,24 @@
 							<div class="popup__form form">
 								<div class="form__wrapper _2cols _gg-30-20">
 									<div class="form__field-wrapper _borded">
-										<input type="text" placeholder="Как к вам обращаться">
+										<div class="form__field-placeholder">Как к вам обращаться</div>
+										<input type="text" class="form__input">
+									</div>
+									<div class="form__field-wrapper _borded _error">
+										<div class="form__field-placeholder">E-mail</div>
+										<input type="text" class="form__input">
 									</div>
 									<div class="form__field-wrapper _borded">
-										<input type="text" placeholder="E-mail">
+										<div class="form__field-placeholder">Телефон</div>
+										<input type="text" class="form__input">
 									</div>
 									<div class="form__field-wrapper _borded">
-										<input type="text" placeholder="Телефон">
+										<div class="form__field-placeholder">Компания</div>
+										<input type="text" class="form__input">
 									</div>
-									<div class="form__field-wrapper _borded">
-										<input type="text" placeholder="Компания">
-									</div>
-									<div class="form__field-wrapper _borded _colspan-2">
-										<textarea placeholder="Задать вопрос" class="_mh-190-160"></textarea>
+									<div class="form__field-wrapper _borded _grid-column-2">
+										<div class="form__field-placeholder _top-20">Задать вопрос</div>
+										<textarea class="form__input"></textarea>
 									</div>
 									<div class="form__field-wrapper _colspan-2 _dflex _bg-none _pt-30-0">
 										<button class="popup__submit button _orange _arrow _juscont-center _maxwdth-220" type="submit">
@@ -432,7 +502,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240730195213"></script>
+	<script src="js/app.min.js?_v=20240730205645"></script>
 </body>
 
 </html>

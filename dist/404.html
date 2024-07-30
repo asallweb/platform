@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240730195213">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240730205645">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -429,19 +429,24 @@
 							<div class="popup__form form">
 								<div class="form__wrapper _2cols _gg-30-20">
 									<div class="form__field-wrapper _borded">
-										<input type="text" placeholder="Как к вам обращаться">
+										<div class="form__field-placeholder">Как к вам обращаться</div>
+										<input type="text" class="form__input">
+									</div>
+									<div class="form__field-wrapper _borded _error">
+										<div class="form__field-placeholder">E-mail</div>
+										<input type="text" class="form__input">
 									</div>
 									<div class="form__field-wrapper _borded">
-										<input type="text" placeholder="E-mail">
+										<div class="form__field-placeholder">Телефон</div>
+										<input type="text" class="form__input">
 									</div>
 									<div class="form__field-wrapper _borded">
-										<input type="text" placeholder="Телефон">
+										<div class="form__field-placeholder">Компания</div>
+										<input type="text" class="form__input">
 									</div>
-									<div class="form__field-wrapper _borded">
-										<input type="text" placeholder="Компания">
-									</div>
-									<div class="form__field-wrapper _borded _colspan-2">
-										<textarea placeholder="Задать вопрос" class="_mh-190-160"></textarea>
+									<div class="form__field-wrapper _borded _grid-column-2">
+										<div class="form__field-placeholder _top-20">Задать вопрос</div>
+										<textarea class="form__input"></textarea>
 									</div>
 									<div class="form__field-wrapper _colspan-2 _dflex _bg-none _pt-30-0">
 										<button class="popup__submit button _orange _arrow _juscont-center _maxwdth-220" type="submit">
@@ -465,7 +470,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240730195213"></script>
+	<script src="js/app.min.js?_v=20240730205645"></script>
 </body>
 
 </html>

@@ -763,7 +763,7 @@ body::after {
 }
 input,
 textarea {
-  padding: 15px 20px;
+  padding: 0 20px;
   border-radius: 10px;
   background: #f8f8f8;
   line-height: 1.3;
@@ -1582,9 +1582,13 @@ blockquote .blockquote__title {
   grid-template-columns: repeat(2,1fr)
 }
 .form__field-wrapper {
+  position: relative;
   border-radius: 10px;
   background: #f8f8f8;
-  overflow: hidden
+  color: #000;
+  overflow: hidden;
+  padding-top: 25px;
+  padding-bottom: 5px
 }
 .form__field-wrapper._borded {
   border: 1px solid #d1d1d1
@@ -1600,6 +1604,10 @@ blockquote .blockquote__title {
 .form__field-wrapper._bg-none {
   background: 0 0
 }
+.form__field-wrapper._error {
+  border-color: #ff0101;
+  color: #ff0101
+}
 .form__submit-text {
   color: rgba(255,255,255,.7);
   line-height: 1.5
@@ -1610,6 +1618,24 @@ blockquote .blockquote__title {
 }
 .form__submit-text a:hover {
   text-decoration: none
+}
+.form__field-placeholder {
+  position: absolute;
+  left: 20px;
+  font-size: 18px;
+  transition: all .3s ease;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none
+}
+.form__field-placeholder._top-20 {
+  top: 20px
+}
+.active .form__field-placeholder {
+  font-size: 12px;
+  top: 12px;
+  color: rgba(0,0,0,.5)
 }
 .main-content__wrapper {
   display: flex;

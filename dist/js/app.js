@@ -4653,6 +4653,33 @@
             }));
         }));
     }));
+    document.addEventListener("DOMContentLoaded", (function() {
+        const wrappers = document.querySelectorAll(".form__field-wrapper");
+        if (wrappers.length > 0) {
+            wrappers.forEach((wrapper => {
+                const input = wrapper.querySelector(".form__input");
+                const placeholder = wrapper.querySelector(".form__field-placeholder");
+                if (input && placeholder) {
+                    if (input.value !== "") wrapper.classList.add("active");
+                    wrapper.addEventListener("click", (function() {
+                        input.focus();
+                    }));
+                    input.addEventListener("focus", (function() {
+                        wrapper.classList.add("active");
+                    }));
+                    input.addEventListener("blur", (function() {
+                        if (input.value === "") wrapper.classList.remove("active");
+                    }));
+                }
+            }));
+            document.addEventListener("click", (function(e) {
+                wrappers.forEach((wrapper => {
+                    const input = wrapper.querySelector(".form__input");
+                    if (input && !wrapper.contains(e.target) && input.value === "") wrapper.classList.remove("active");
+                }));
+            }));
+        }
+    }));
     window["FLS"] = true;
     menuInit();
     spollers();
